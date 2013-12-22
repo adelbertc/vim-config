@@ -90,6 +90,7 @@ nmap <leader>w <C-w>w
 "" neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_force_overwrite_completefunc = 1
 set completeopt-=preview
 
 "" NERDTree
