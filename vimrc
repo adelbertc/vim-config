@@ -9,13 +9,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "" General plugins
-Bundle 'Shougo/neocomplcache.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'Shougo/neocomplcache.vim'
 
 "" Haskell plugins
-Bundle 'lukerandall/haskellmode-vim'
 Bundle 'eagletmt/neco-ghc'
+Bundle 'lukerandall/haskellmode-vim'
 
 "" Scala plugins
 Bundle 'derekwyatt/vim-scala'
@@ -67,12 +67,6 @@ inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")
 inoremap        [  []<Left>
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 
-" ctrlp
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\.git$\|target',
-"   \ 'file': '\.class$'
-"   \ }
-
 "" haskellmode
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "open"
@@ -90,35 +84,27 @@ set smarttab
 "" line numbers
 set number
 
-"" map <C-w>w/p (switch buffer focus) to something nicer
-nmap <leader>t :NERDTreeToggle<CR>
+"" map <C-w>w (switch buffer focus) to something nicer
 nmap <leader>w <C-w>w
 
 "" neocomplcache
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:neocomplcache_enable_at_startup = 1
 set completeopt-=preview
 
 "" NERDTree
-autocmd vimenter * if &filetype !=# 'haskell' && &filetype !=# 'idris' | NERDTree | endif
+autocmd vimenter * if &filetype !=# 'haskell' && &filetype !=# 'vim' | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+nmap <leader>t :NERDTreeToggle<CR>
 
 "" sbt quickfix stuff
 "" As of sbt-quickfix 0.2.x there is no longer a vim
 "" config needed - see https://github.com/dscleaver/sbt-quickfix
 
-"" scala
-"" au BufNewFile,BufRead *.scala set shiftwidth=2
-"" hi scalaNew gui=underline                                                                                            
-"" hi scalaMethodCall gui=italic                                                                                         
-"" hi scalaValName gui=underline                                                                                         
-"" hi scalaVarName gui=underline
-
 "" show title
 set title
 
 "" syntastic
-let g:syntastic_idris_checkers=[]
 let g:syntastic_scala_checkers=[]
 
 "" syntax highlighting
