@@ -16,6 +16,7 @@ Bundle 'Shougo/neocomplcache.vim'
 "" Haskell plugins
 Bundle 'eagletmt/neco-ghc'
 Bundle 'lukerandall/haskellmode-vim'
+Bundle 'Twinside/vim-hoogle'
 
 "" Scala plugins
 Bundle 'derekwyatt/vim-scala'
