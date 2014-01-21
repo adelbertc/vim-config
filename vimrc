@@ -18,6 +18,9 @@ Bundle 'eagletmt/neco-ghc'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'Twinside/vim-hoogle'
 
+"" Prolog plugins
+Bundle 'adimit/prolog.vim'
+
 "" Scala plugins
 Bundle 'derekwyatt/vim-scala'
 
