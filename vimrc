@@ -66,7 +66,7 @@ inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]
 inoremap []     []
 
 "" CtrlP
-let g:ctrlp_map="<leader>q"
+let g:ctrlp_map="<leader>l"
 let g:ctrlp_custom_ignore={'dir': 'target'}
 
 "" haskellmode
@@ -98,7 +98,9 @@ set completeopt-=preview
 "" NERDTree
 autocmd vimenter * if &filetype !=# 'haskell' && &filetype !=# 'vim' | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-nmap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>e gt
+nnoremap <leader>q gT
 
 "" sbt quickfix stuff
 "" As of sbt-quickfix 0.2.x there is no longer a vim
