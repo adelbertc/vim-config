@@ -34,14 +34,16 @@ let mapleader = ","
 command Sz resize 10
 
 "" arrow keys disable
-nnoremap <up> <nop>
+nnoremap <right> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+nnoremap <up> <nop>
+
+vnoremap <right> <nop>
+vnoremap <down> <nop>
+vnoremap <left> <nop>
+vnoremap <up> <nop>
+
 nnoremap j gj
 nnoremap k gk
 
@@ -49,27 +51,18 @@ nnoremap k gk
 set showmatch
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
-inoremap {      {
+inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 inoremap {}     {}
 
 inoremap (      ()<Left>
 inoremap (<CR>  (<CR>)<Esc>O
-inoremap ((     (
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 inoremap ()     ()
 
 inoremap [      []<Left>
 inoremap [<CR>  [<CR>]<Esc>O
-inoremap [[     [
-inoremap []     []
-
-inoremap        {  {}<Left>
-inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-
-inoremap        (  ()<Left>
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-
-inoremap        [  []<Left>
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+inoremap []     []
 
 "" haskellmode
 au Bufenter *.hs compiler ghc
@@ -81,9 +74,9 @@ set splitbelow
 
 "" indentation
 set autoindent
+set tabstop=4
+set softtabstop=4
 set expandtab
-set shiftwidth=4
-set smarttab
 
 "" line numbers
 set number
@@ -113,12 +106,11 @@ set title
 let g:syntastic_scala_checkers=[]
 
 "" syntax highlighting
-syntax on
-set t_Co=16
-set background=dark
 colorscheme solarized
+syntax on
+set background=dark
+set t_Co=16
 
 "" wrap textlines
-set wrap
+set colorcolumn=81
 set textwidth=80
-set formatoptions=qrn1
