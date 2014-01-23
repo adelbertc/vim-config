@@ -9,6 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "" General plugins
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'Shougo/neocomplcache.vim'
@@ -63,6 +64,10 @@ inoremap [      []<Left>
 inoremap [<CR>  [<CR>]<Esc>O
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 inoremap []     []
+
+"" CtrlP
+let g:ctrlp_map="<leader>q"
+let g:ctrlp_custom_ignore={'dir': 'target'}
 
 "" haskellmode
 au Bufenter *.hs compiler ghc
