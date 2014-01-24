@@ -14,6 +14,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'Shougo/neocomplcache.vim'
+Bundle 'tpope/vim-fugitive'
 
 "" Haskell plugins
 Bundle 'eagletmt/neco-ghc'
