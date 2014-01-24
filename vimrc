@@ -9,6 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "" General plugins
+Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
@@ -30,6 +31,13 @@ filetype plugin indent on
 " Non-Vundle
 "" Leader key
 let mapleader = ","
+
+"" airline
+set laststatus=2
+let g:airline_left_sep=""
+let g:airline_left_alt_sep="|"
+let g:airline_right_sep=""
+let g:airline_right_alt_sep="|"
 
 "" aliases
 command Sz resize 10
@@ -113,10 +121,13 @@ set title
 let g:syntastic_scala_checkers=[]
 
 "" syntax highlighting
+set t_Co=256
 colorscheme solarized
 syntax on
 set background=dark
-set t_Co=16
+
+"" utf-8 ftw
+set encoding=utf-8
 
 "" wrap textlines
 set colorcolumn=81
