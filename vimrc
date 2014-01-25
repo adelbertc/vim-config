@@ -111,9 +111,8 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>e gt
 nnoremap <leader>q gT
 
-" sbt quickfix stuff
-" As of sbt-quickfix 0.2.x there is no longer a vim
-" config needed - see https://github.com/dscleaver/sbt-quickfix
+" sbt quickfix - installed via SBT, not Vundle so need to manually add to rtp
+set rtp+=~/.vim/bundle/vim-sbt
 
 " show title
 set title
