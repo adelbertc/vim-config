@@ -130,5 +130,5 @@ set background=dark
 set encoding=utf-8
 
 " wrap textlines
-set colorcolumn=81
-set textwidth=80
+set colorcolumn=121
+set textwidth=120
