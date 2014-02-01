@@ -6,29 +6,29 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Let Vundle manage Vundle!
-Bundle 'gmarik/vundle'
+Bundle "gmarik/vundle"
 
 " General plugins
-Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'Shougo/neocomplcache.vim'
-Bundle 'tpope/vim-fugitive'
+Bundle "bling/vim-airline"
+Bundle "kien/ctrlp.vim"
+Bundle "scrooloose/nerdtree"
+Bundle "scrooloose/syntastic"
+Bundle "Shougo/neocomplcache.vim"
+Bundle "tpope/vim-fugitive"
 
 " Haskell plugins
-Bundle 'eagletmt/neco-ghc'
-Bundle 'lukerandall/haskellmode-vim'
-Bundle 'Twinside/vim-hoogle'
+Bundle "eagletmt/neco-ghc"
+Bundle "lukerandall/haskellmode-vim"
+Bundle "Twinside/vim-hoogle"
 
 " Idris plugins
-Bundle 'idris-hackers/idris-vim'
+Bundle "idris-hackers/idris-vim"
 
 " Prolog plugins
-Bundle 'adimit/prolog.vim'
+Bundle "adimit/prolog.vim"
 
 " Scala plugins
-Bundle 'derekwyatt/vim-scala'
+Bundle "derekwyatt/vim-scala"
 
 filetype plugin indent on
 
@@ -79,7 +79,7 @@ inoremap []     []
 
 " CtrlP
 let g:ctrlp_map="<leader>l"
-let g:ctrlp_custom_ignore={'dir': 'target'}
+let g:ctrlp_custom_ignore={"dir": "target"}
 
 " haskellmode
 au Bufenter *.hs compiler ghc
@@ -108,7 +108,7 @@ let g:neocomplcache_force_overwrite_completefunc = 1
 set completeopt-=preview
 
 " NERDTree
-autocmd vimenter * if &filetype !=# 'haskell' && &filetype !=# 'vim' | NERDTree | endif
+autocmd vimenter * if &filetype !=# "haskell" && &filetype !=# "vim" | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>e gt
