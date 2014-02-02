@@ -89,6 +89,9 @@ let g:haddock_browser_callformat = "%s %s"
 " horizontal split splits below
 set splitbelow
 
+" idris-vim
+let g:loaded_syntastic_idris_idris_checker=0
+
 " indentation
 set autoindent
 set tabstop=4
