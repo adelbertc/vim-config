@@ -24,9 +24,6 @@ Bundle "Twinside/vim-hoogle"
 " Idris plugins
 Bundle "idris-hackers/idris-vim"
 
-" Prolog plugins
-Bundle "adimit/prolog.vim"
-
 " Scala plugins
 Bundle "derekwyatt/vim-scala"
 
