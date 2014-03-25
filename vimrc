@@ -81,6 +81,14 @@ inoremap []     []
 let g:ctrlp_map="<leader>l"
 let g:ctrlp_custom_ignore={"dir": "target"}
 
+" gvim options
+if has("gui_running")
+    set guicursor+=a:blinkon0
+
+    " Disable scrollbar on vertical split
+    set guioptions-=L
+endif
+
 " haskellmode
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "open"
