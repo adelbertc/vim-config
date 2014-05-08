@@ -2,8 +2,8 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle!
 Bundle "gmarik/vundle"
@@ -27,6 +27,7 @@ Bundle "idris-hackers/idris-vim"
 " Scala plugins
 Bundle "derekwyatt/vim-scala"
 
+call vundle#end()
 filetype plugin indent on
 
 " Non-Vundle
@@ -98,10 +99,11 @@ set splitbelow
 let g:loaded_syntastic_idris_idris_checker=0
 
 " indentation
-set autoindent
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
+set autoindent
 
 " line numbers
 set number
