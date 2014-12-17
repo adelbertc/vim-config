@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " Let Vundle manage Vundle!
@@ -118,7 +118,7 @@ let g:neocomplcache_force_overwrite_completefunc = 1
 set completeopt-=preview
 
 " NERDTree
-autocmd vimenter * if &filetype !=# "haskell" && &filetype !=# "vim" | NERDTree | endif
+autocmd vimenter * if &filetype !=# "haskell" && &filetype !=# "idris" && &filetype !=# "vim" | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>e gt
