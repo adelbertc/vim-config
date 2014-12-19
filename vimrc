@@ -11,6 +11,7 @@ Bundle "gmarik/vundle"
 " General plugins
 Bundle "bling/vim-airline"
 Bundle "kien/ctrlp.vim"
+Bundle "ntpeters/vim-better-whitespace"
 Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/syntastic"
 Bundle "Shougo/neocomplcache.vim"
@@ -76,6 +77,7 @@ inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]
 inoremap []     []
 
 " CtrlP
+let g:ctrlp_by_filename=1
 let g:ctrlp_map="<leader>l"
 let g:ctrlp_custom_ignore={"dir": "target"}
 
