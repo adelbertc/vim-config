@@ -2,11 +2,11 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle!
-Bundle "gmarik/vundle"
+Bundle "gmarik/Vundle.vim"
 
 " General plugins
 Bundle "bling/vim-airline"
@@ -75,6 +75,12 @@ inoremap [      []<Left>
 inoremap [<CR>  [<CR>]<Esc>O
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 inoremap []     []
+
+" ctags
+" set tags=./.tags,.tags,./tags,tags
+" for tagfile in split(glob('.*tags'), "\n")
+"     let &tags .= ',' . tagfile
+" endfor
 
 " CtrlP
 let g:ctrlp_by_filename=1
