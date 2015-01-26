@@ -119,6 +119,9 @@ set number
 " map <C-w>w (switch buffer focus) to something nicer
 nmap <leader>w <C-w>w
 
+" Markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:neocomplcache_enable_at_startup = 1
