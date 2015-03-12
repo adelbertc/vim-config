@@ -59,6 +59,9 @@ vnoremap <up> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" backspace
+set backspace=indent,eol,start
+
 " brace completion
 set showmatch
 inoremap {      {}<Left>
@@ -154,5 +157,7 @@ set background=dark
 set encoding=utf-8
 
 " wrap textlines
-set colorcolumn=121
+if exists("&colorcolumn")
+  set colorcolumn=121
+endif
 set textwidth=120
